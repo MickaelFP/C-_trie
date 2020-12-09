@@ -3,10 +3,22 @@
 
 using namespace std;
 
+void insertion( int tab[10]) {
+	for(int i = 0; i < 9; i++) {
+		int temp = tab[i];
+			
+		while(j > 0 && tab[j -1] > temp) {
+			tab[j - 1] = tab[j];
+			j-1 = j;
+			temp = tab[j];
+		}
+	}
+}
+
 void bubbleSort(int tab[10]) {
-	for (int i = 9; i > 0; i--) {
-		for (int j = 0; j <= (i - 1); j++) {
-			if (tab[j + 1] < tab[j]) {
+	for(int i = 9; i > 0; i--) {
+		for(int j = 0; j <= (i - 1); j++) {
+			if(tab[j + 1] < tab[j]) {
 
 				int temp = tab[j + 1];
 				tab[j + 1] = tab[j];
@@ -20,13 +32,12 @@ void bubbleSort(int tab[10]) {
 	}
 }
 
-
 int main() {
 
 	srand(time(NULL));
 
 	int tab[10] = { 0 };
-	for (int i = 0; i < 10; i++) {
+	for(int i = 0; i < 10; i++) {
 		bool alreadyIn = false;
 		int random = rand() % 10 + 1;
 		for (int j = 0; j < 10; j++) {
