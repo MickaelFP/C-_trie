@@ -6,12 +6,13 @@ using namespace std;
 void insertion( int tab[10]) {
 	for(int i = 0; i < 9; i++) {
 		int temp = tab[i];
+		int j = i;
 			
-		while(j > 0 && tab[j -1] > temp) {
-			tab[j - 1] = tab[j];
-			j-1 = j;
-			temp = tab[j];
+		while(j > 0 && tab[j - 1] > temp) {
+			tab[j] = tab[j - 1];
+			j = j - 1;
 		}
+		tab[j] = temp;
 	}
 }
 
