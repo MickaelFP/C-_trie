@@ -3,19 +3,6 @@
 
 using namespace std;
 
-void insertion( int tab[10]) {
-	for(int i = 0; i < 9; i++) {
-		int temp = tab[i];
-		int j = i;
-			
-		while(j > 0 && tab[j - 1] > temp) {
-			tab[j] = tab[j - 1];
-			j = j - 1;
-		}
-		tab[j] = temp;
-	}
-}
-
 void bubbleSort(int tab[10]) {
 	for(int i = 9; i > 0; i--) {
 		for(int j = 0; j <= (i - 1); j++) {
@@ -32,6 +19,21 @@ void bubbleSort(int tab[10]) {
 		}
 	}
 }
+
+void insertSort( int tab[10]) {
+	for(int i = 1; i < 10; i++) {
+		int temp = tab[i];
+		int j = i;
+			
+		while(j > 0 && tab[j - 1] > temp) {
+			tab[j] = tab[j - 1];
+			j = j - 1;
+		}
+		tab[j] = temp;
+	}
+}
+
+//void selectSort( int tab[10]) {
 
 int main() {
 
