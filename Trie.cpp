@@ -32,8 +32,34 @@ void insertSort( int tab[10]) {
 		tab[j] = temp;
 	}
 }
+/* TRI PAR SÉLECTION */
 
-//void selectSort( int tab[10]) {
+Void selectSort(int tab[10]) {
+	for(int i = 0; i < 8; i++) {
+		int min = i;
+		for(int j = 1; j < 9; j++) {
+			if(tab[j] < tab[min]) {
+				min = j;
+}
+}
+		if(min != i) {
+			swap(tab[i], tab[min]);
+		}
+	}
+}
+
+/*
+procédure tri_selection(tableau t)
+n ← longueur(t) 
+pour i de 0 à n - 2
+min ← i       
+pour j de i + 1 à n - 1
+si t[j] < t[min], alors min ← j
+fin pour
+si min ≠ i, alors échanger t[i] et t[min]
+fin pour
+fin procédure
+*/
 
 int main() {
 
