@@ -3,6 +3,7 @@
 
 using namespace std;
 
+/* TRI A BULLE */
 void bubbleSort(int tab[10]) {
 	for(int i = 9; i > 0; i--) {
 		for(int j = 0; j <= (i - 1); j++) {
@@ -20,6 +21,7 @@ void bubbleSort(int tab[10]) {
 	}
 }
 
+/* TRI PAR INSERTION */
 void insertSort( int tab[10]) {
 	for(int i = 1; i < 10; i++) {
 		int temp = tab[i];
@@ -32,8 +34,8 @@ void insertSort( int tab[10]) {
 		tab[j] = temp;
 	}
 }
-/* TRI PAR SÉLECTION */
 
+/* TRI PAR SÉLECTION */
 Void selectSort(int tab[10]) {
 	for(int i = 0; i < 8; i++) {
 		int min = i;
